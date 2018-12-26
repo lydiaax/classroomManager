@@ -108,3 +108,24 @@ class tb_student(db.Model, Mybase):
     telephone = db.Column(db.String(11))
     birthday = db.Column(db.DateTime)
     pinyin = db.Column(db.String(255))
+	
+class tb_exam_table(db.Model,Mybase):
+    __tablename__='tb_exam_table'
+    course_id = db.Column(db.Integer, primary_key=True, autoincrement=True)
+    course_name = db.Column(db.String(255))
+    day = db.Column(db.String(255))
+    week = db.Column(db.Integer, primary_key=True, autoincrement=True)
+    time = db.Column(db.String(255))
+    class_room = db.Column(db.String(255))
+
+class tb_classroom_table(db.Model,Mybase):
+    __tablename__='tb_classroom_table'
+    course_name = db.Column(db.String(255),primary_key=True,autoincrement=True)
+    sun = db.Column(db.String(255))
+    mon = db.Column(db.String(255))
+    tues = db.Column(db.String(255))
+    wed = db.Column(db.String(255))
+    thur = db.Column(db.String(255))
+    fri = db.Column(db.String(255))
+    sat = db.Column(db.String(255))
+    number = db.Column(db.Integer)

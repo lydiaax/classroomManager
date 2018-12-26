@@ -6,7 +6,7 @@ import json
 from ..models import (db, tb_course_student,
                       tb_major, tb_mechmism, tb_student,
                       tb_class, tb_teacher, tb_reservation,
-                      tb_course)
+                      tb_course, tb_exam_table, tb_classroom_table)
 from sqlalchemy import desc, exc, asc
 from datetime import datetime
 from flask.views import MethodView
@@ -415,4 +415,127 @@ tb_reservationview = wrap_jsonify(Tb_reservationAPI
 
 main.add_url_rule('/tb_reservation',
                   view_func=tb_reservationview,
+                  methods=['GET', 'PUT', 'DELETE', 'POST'])
+
+				  
+class Tb_classroom_tableAPI(MethodView):
+
+    def get(self):
+
+        data = json.loads(request.data)
+        mode = data["mode"]
+        if mode==1:
+            day = data["day"]
+            time = data["time"]
+            number = data["number"]
+            courses = tb_classroom_table.query.filter(tb_classroom_table.number>=number).all()
+            courses = [to_dict(c) for c in courses]
+            new_courses = []
+            for item in courses:
+                if time not in item[day]:
+                    new_item = {'course_name':item['course_name'],'number':item['number']}
+                    new_courses.append(new_item)
+        else:
+            course_name = data['course_name']
+            day = data['day']
+            time = data['time']
+            courses = tb_classroom_table.query.filter(tb_classroom_table.course_name==course_name).all()
+            courses = [to_dict(c) for c in courses]
+            for item in courses:
+                if time not in item[day]:
+                    return  {'result':1}
+                else:
+                    return {'result':0}
+        if new_courses is None:
+            return []
+        else:
+            return new_courses#[to_dict(c) for c in courses]
+
+    def put(self):
+        data = json.loads(request.data)
+        course = tb_classroom_table(**data)
+        db.session.add(course)
+        db.session.commit()
+        return 'ok'
+
+    def delete(self):
+        data = json.loads(request.data)
+        courses = tb_classroom_table.query.filter_by(**data).all()
+        if not courses:
+            return '空'
+        for c in courses:
+            db.session.delete(c)
+        db.session.commit()
+
+        return 'ok'
+
+    def post(self):
+        data = json.loads(request.data)
+        filter_data = json.loads(data['filter'])
+        update_data = json.loads(data['update'])
+        (tb_classroom_table
+         .query
+         .filter_by(**filter_data)
+         .update(update_data))
+        db.session.commit()
+
+        return 'ok'
+
+
+tb_classroom_tableview = wrap_jsonify(Tb_classroom_tableAPI
+                              .as_view('tb_classroom_tableapi'))
+
+main.add_url_rule('/tb_classroom_table',
+                  view_func=tb_classroom_tableview,
+                  methods=['GET', 'PUT', 'DELETE', 'POST'])
+
+
+
+class Tb_exam_tableAPI(MethodView):
+
+    def get(self):
+        data = json.loads(request.data)
+        courses = tb_exam_table.query.filter_by(**data).all()
+
+        if courses is None:
+            return []
+        else:
+            return [to_dict(c) for c in courses]
+
+    def put(self):
+        data = json.loads(request.data)
+        course = tb_exam_table(**data)
+        db.session.add(course)
+        db.session.commit()
+        return 'ok'
+
+    def delete(self):
+        data = json.loads(request.data)
+        courses = tb_exam_table.query.filter_by(**data).all()
+        if not courses:
+            return '空'
+        for c in courses:
+            db.session.delete(c)
+        db.session.commit()
+
+        return 'ok'
+
+    def post(self):
+        data = json.loads(request.data)
+        filter_data = json.loads(data['filter'])
+        update_data = json.loads(data['update'])
+        (tb_exam_table
+         .query
+         .filter_by(**filter_data)
+         .update(update_data))
+        db.session.commit()
+
+        return 'ok'
+
+
+tb_exam_tableview = wrap_jsonify(Tb_exam_tableAPI
+                              .as_view('tb_exam_tableapi'))
+
+main.add_url_rule('/tb_exam_table',
+                  view_func=tb_exam_tableview,
                   methods=['GET', 'PUT', 'DELETE', 'POST'])

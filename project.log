@@ -56,3 +56,597 @@ Traceback (most recent call last):
   File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\json\decoder.py", line 355, in raw_decode
     obj, end = self.scan_once(s, idx)
 json.decoder.JSONDecodeError: Expecting property name enclosed in double quotes: line 2 column 2 (char 3)
+2018-12-23 15:51:34,409 ERROR:Exception on /main/tb_reservation [POST] [in C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\app.py:1761]
+Traceback (most recent call last):
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:\SoftEngine\classroomManager\project\project\utildef.py", line 21, in decorator
+    rv = f(*args, **kwargs)
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\views.py", line 88, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\views.py", line 158, in dispatch_request
+    return meth(*args, **kwargs)
+  File "D:\SoftEngine\classroomManager\project\project\main\views.py", line 401, in post
+    data = json.loads(request.data)
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\json\__init__.py", line 354, in loads
+    return _default_decoder.decode(s)
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\json\decoder.py", line 339, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\json\decoder.py", line 355, in raw_decode
+    obj, end = self.scan_once(s, idx)
+json.decoder.JSONDecodeError: Expecting property name enclosed in double quotes: line 2 column 2 (char 3)
+2018-12-23 15:53:34,724 ERROR:Exception on /main/tb_reservation [POST] [in C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\app.py:1761]
+Traceback (most recent call last):
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:\SoftEngine\classroomManager\project\project\utildef.py", line 21, in decorator
+    rv = f(*args, **kwargs)
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\views.py", line 88, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\views.py", line 158, in dispatch_request
+    return meth(*args, **kwargs)
+  File "D:\SoftEngine\classroomManager\project\project\main\views.py", line 402, in post
+    filter_data = json.loads(data['filter'])
+KeyError: 'filter'
+2018-12-23 16:00:42,979 ERROR:Exception on /main/tb_reservation [POST] [in C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\app.py:1761]
+Traceback (most recent call last):
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:\SoftEngine\classroomManager\project\project\utildef.py", line 21, in decorator
+    rv = f(*args, **kwargs)
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\views.py", line 88, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\views.py", line 158, in dispatch_request
+    return meth(*args, **kwargs)
+  File "D:\SoftEngine\classroomManager\project\project\main\views.py", line 402, in post
+    filter_data = json.loads(data['filter'])
+KeyError: 'filter'
+2018-12-23 16:02:17,577 ERROR:Exception on /main/tb_mechmism [POST] [in C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\app.py:1761]
+Traceback (most recent call last):
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:\SoftEngine\classroomManager\project\project\utildef.py", line 21, in decorator
+    rv = f(*args, **kwargs)
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\views.py", line 88, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\views.py", line 158, in dispatch_request
+    return meth(*args, **kwargs)
+  File "D:\SoftEngine\classroomManager\project\project\main\views.py", line 201, in post
+    data = json.loads(request.data)
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\json\__init__.py", line 354, in loads
+    return _default_decoder.decode(s)
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\json\decoder.py", line 339, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\json\decoder.py", line 357, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 2 column 18 (char 19)
+2018-12-23 16:03:05,656 ERROR:Exception on /main/tb_mechmism [POST] [in C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\app.py:1761]
+Traceback (most recent call last):
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:\SoftEngine\classroomManager\project\project\utildef.py", line 21, in decorator
+    rv = f(*args, **kwargs)
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\views.py", line 88, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\views.py", line 158, in dispatch_request
+    return meth(*args, **kwargs)
+  File "D:\SoftEngine\classroomManager\project\project\main\views.py", line 201, in post
+    data = json.loads(request.data)
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\json\__init__.py", line 354, in loads
+    return _default_decoder.decode(s)
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\json\decoder.py", line 339, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\json\decoder.py", line 355, in raw_decode
+    obj, end = self.scan_once(s, idx)
+json.decoder.JSONDecodeError: Expecting property name enclosed in double quotes: line 2 column 2 (char 3)
+2018-12-24 16:28:21,296 ERROR:Exception on /main/tb_mechmism [PUT] [in C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\app.py:1761]
+Traceback (most recent call last):
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:\SoftEngine\classroomManager\project\project\utildef.py", line 21, in decorator
+    rv = f(*args, **kwargs)
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\views.py", line 88, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\views.py", line 158, in dispatch_request
+    return meth(*args, **kwargs)
+  File "D:\SoftEngine\classroomManager\project\project\main\views.py", line 183, in put
+    data = json.loads(request.data)
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\json\__init__.py", line 354, in loads
+    return _default_decoder.decode(s)
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\json\decoder.py", line 339, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\json\decoder.py", line 355, in raw_decode
+    obj, end = self.scan_once(s, idx)
+json.decoder.JSONDecodeError: Expecting property name enclosed in double quotes: line 2 column 2 (char 3)
+2018-12-24 16:29:02,760 ERROR:Exception on /main/tb_mechmism [PUT] [in C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\app.py:1761]
+Traceback (most recent call last):
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:\SoftEngine\classroomManager\project\project\utildef.py", line 21, in decorator
+    rv = f(*args, **kwargs)
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\views.py", line 88, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\views.py", line 158, in dispatch_request
+    return meth(*args, **kwargs)
+  File "D:\SoftEngine\classroomManager\project\project\main\views.py", line 183, in put
+    data = json.loads(request.data)
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\json\__init__.py", line 354, in loads
+    return _default_decoder.decode(s)
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\json\decoder.py", line 339, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\json\decoder.py", line 355, in raw_decode
+    obj, end = self.scan_once(s, idx)
+json.decoder.JSONDecodeError: Expecting property name enclosed in double quotes: line 2 column 2 (char 3)
+2018-12-24 16:30:37,129 ERROR:Exception on /main/tb_mechmism [PUT] [in C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\app.py:1761]
+Traceback (most recent call last):
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:\SoftEngine\classroomManager\project\project\utildef.py", line 21, in decorator
+    rv = f(*args, **kwargs)
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\views.py", line 88, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\views.py", line 158, in dispatch_request
+    return meth(*args, **kwargs)
+  File "D:\SoftEngine\classroomManager\project\project\main\views.py", line 183, in put
+    data = json.loads(request.data)
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\json\__init__.py", line 354, in loads
+    return _default_decoder.decode(s)
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\json\decoder.py", line 339, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\json\decoder.py", line 355, in raw_decode
+    obj, end = self.scan_once(s, idx)
+json.decoder.JSONDecodeError: Expecting ',' delimiter: line 4 column 3 (char 41)
+2018-12-24 16:30:50,685 ERROR:Exception on /main/tb_mechmism [PUT] [in C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\app.py:1761]
+Traceback (most recent call last):
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:\SoftEngine\classroomManager\project\project\utildef.py", line 21, in decorator
+    rv = f(*args, **kwargs)
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\views.py", line 88, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\views.py", line 158, in dispatch_request
+    return meth(*args, **kwargs)
+  File "D:\SoftEngine\classroomManager\project\project\main\views.py", line 184, in put
+    course = tb_mechmism(**data)
+  File "<string>", line 4, in __init__
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\sqlalchemy\orm\state.py", line 424, in _initialize_instance
+    manager.dispatch.init_failure(self, args, kwargs)
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\sqlalchemy\util\langhelpers.py", line 66, in __exit__
+    compat.reraise(exc_type, exc_value, exc_tb)
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\sqlalchemy\util\compat.py", line 249, in reraise
+    raise value
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\sqlalchemy\orm\state.py", line 421, in _initialize_instance
+    return manager.original_init(*mixed[1:], **kwargs)
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\sqlalchemy\ext\declarative\base.py", line 761, in _declarative_constructor
+    (k, cls_.__name__))
+TypeError: 'update' is an invalid keyword argument for tb_mechmism
+2018-12-24 16:32:31,367 ERROR:Exception on /main/tb_mechmism [DELETE] [in C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\app.py:1761]
+Traceback (most recent call last):
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:\SoftEngine\classroomManager\project\project\utildef.py", line 21, in decorator
+    rv = f(*args, **kwargs)
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\views.py", line 88, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\views.py", line 158, in dispatch_request
+    return meth(*args, **kwargs)
+  File "D:\SoftEngine\classroomManager\project\project\main\views.py", line 190, in delete
+    data = json.loads(request.data)
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\json\__init__.py", line 354, in loads
+    return _default_decoder.decode(s)
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\json\decoder.py", line 339, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\json\decoder.py", line 355, in raw_decode
+    obj, end = self.scan_once(s, idx)
+json.decoder.JSONDecodeError: Expecting property name enclosed in double quotes: line 4 column 1 (char 17)
+2018-12-24 16:36:12,324 ERROR:Exception on /main/tb_mechmism [POST] [in C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\app.py:1761]
+Traceback (most recent call last):
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:\SoftEngine\classroomManager\project\project\utildef.py", line 21, in decorator
+    rv = f(*args, **kwargs)
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\views.py", line 88, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\views.py", line 158, in dispatch_request
+    return meth(*args, **kwargs)
+  File "D:\SoftEngine\classroomManager\project\project\main\views.py", line 202, in post
+    filter_data = json.loads(data['filter'])
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\json\__init__.py", line 348, in loads
+    'not {!r}'.format(s.__class__.__name__))
+TypeError: the JSON object must be str, bytes or bytearray, not 'dict'
+2018-12-24 16:36:25,121 ERROR:Exception on /main/tb_mechmism [POST] [in C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\app.py:1761]
+Traceback (most recent call last):
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:\SoftEngine\classroomManager\project\project\utildef.py", line 21, in decorator
+    rv = f(*args, **kwargs)
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\views.py", line 88, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\views.py", line 158, in dispatch_request
+    return meth(*args, **kwargs)
+  File "D:\SoftEngine\classroomManager\project\project\main\views.py", line 202, in post
+    filter_data = json.loads(data['filter'])
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\json\__init__.py", line 348, in loads
+    'not {!r}'.format(s.__class__.__name__))
+TypeError: the JSON object must be str, bytes or bytearray, not 'dict'
+2018-12-24 16:36:49,703 ERROR:Exception on /main/tb_mechmism [POST] [in C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\app.py:1761]
+Traceback (most recent call last):
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:\SoftEngine\classroomManager\project\project\utildef.py", line 21, in decorator
+    rv = f(*args, **kwargs)
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\views.py", line 88, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\views.py", line 158, in dispatch_request
+    return meth(*args, **kwargs)
+  File "D:\SoftEngine\classroomManager\project\project\main\views.py", line 201, in post
+    data = json.loads(request.data)
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\json\__init__.py", line 354, in loads
+    return _default_decoder.decode(s)
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\json\decoder.py", line 339, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\json\decoder.py", line 355, in raw_decode
+    obj, end = self.scan_once(s, idx)
+json.decoder.JSONDecodeError: Invalid control character at: line 2 column 13 (char 14)
+2018-12-24 16:37:42,969 ERROR:Exception on /main/tb_mechmism [POST] [in C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\app.py:1761]
+Traceback (most recent call last):
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:\SoftEngine\classroomManager\project\project\utildef.py", line 21, in decorator
+    rv = f(*args, **kwargs)
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\views.py", line 88, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\views.py", line 158, in dispatch_request
+    return meth(*args, **kwargs)
+  File "D:\SoftEngine\classroomManager\project\project\main\views.py", line 201, in post
+    data = json.loads(request.data)
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\json\__init__.py", line 354, in loads
+    return _default_decoder.decode(s)
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\json\decoder.py", line 339, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\json\decoder.py", line 355, in raw_decode
+    obj, end = self.scan_once(s, idx)
+json.decoder.JSONDecodeError: Expecting ',' delimiter: line 2 column 14 (char 15)
+2018-12-24 16:39:25,540 ERROR:Exception on /main/tb_mechmism [POST] [in C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\app.py:1761]
+Traceback (most recent call last):
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:\SoftEngine\classroomManager\project\project\utildef.py", line 21, in decorator
+    rv = f(*args, **kwargs)
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\views.py", line 88, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\views.py", line 158, in dispatch_request
+    return meth(*args, **kwargs)
+  File "D:\SoftEngine\classroomManager\project\project\main\views.py", line 201, in post
+    data = json.loads(request.data)
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\json\__init__.py", line 354, in loads
+    return _default_decoder.decode(s)
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\json\decoder.py", line 339, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\json\decoder.py", line 355, in raw_decode
+    obj, end = self.scan_once(s, idx)
+json.decoder.JSONDecodeError: Expecting ',' delimiter: line 2 column 14 (char 15)
+2018-12-24 16:41:22,896 ERROR:Exception on /main/tb_mechmism [POST] [in C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\app.py:1761]
+Traceback (most recent call last):
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:\SoftEngine\classroomManager\project\project\utildef.py", line 21, in decorator
+    rv = f(*args, **kwargs)
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\views.py", line 88, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\views.py", line 158, in dispatch_request
+    return meth(*args, **kwargs)
+  File "D:\SoftEngine\classroomManager\project\project\main\views.py", line 201, in post
+    data = json.loads(request.data)
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\json\__init__.py", line 354, in loads
+    return _default_decoder.decode(s)
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\json\decoder.py", line 339, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\json\decoder.py", line 355, in raw_decode
+    obj, end = self.scan_once(s, idx)
+json.decoder.JSONDecodeError: Expecting ',' delimiter: line 3 column 14 (char 31)
+2018-12-24 16:44:00,615 ERROR:Exception on /main/tb_mechmism [POST] [in C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\app.py:1761]
+Traceback (most recent call last):
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:\SoftEngine\classroomManager\project\project\utildef.py", line 21, in decorator
+    rv = f(*args, **kwargs)
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\views.py", line 88, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\views.py", line 158, in dispatch_request
+    return meth(*args, **kwargs)
+  File "D:\SoftEngine\classroomManager\project\project\main\views.py", line 201, in post
+    data = json.loads(request.data)
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\json\__init__.py", line 354, in loads
+    return _default_decoder.decode(s)
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\json\decoder.py", line 339, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\json\decoder.py", line 357, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 2 column 11 (char 12)
+2018-12-24 16:44:56,019 ERROR:Exception on /main/tb_mechmism [POST] [in C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\app.py:1761]
+Traceback (most recent call last):
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:\SoftEngine\classroomManager\project\project\utildef.py", line 21, in decorator
+    rv = f(*args, **kwargs)
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\views.py", line 88, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\views.py", line 158, in dispatch_request
+    return meth(*args, **kwargs)
+  File "D:\SoftEngine\classroomManager\project\project\main\views.py", line 201, in post
+    data = json.loads(request.data)
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\json\__init__.py", line 354, in loads
+    return _default_decoder.decode(s)
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\json\decoder.py", line 339, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\json\decoder.py", line 355, in raw_decode
+    obj, end = self.scan_once(s, idx)
+json.decoder.JSONDecodeError: Invalid control character at: line 2 column 13 (char 14)
+2018-12-24 22:19:44,193 ERROR:Exception on /main/tb_mechmism [POST] [in C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\app.py:1761]
+Traceback (most recent call last):
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:\SoftEngine\classroomManager\project\project\utildef.py", line 21, in decorator
+    rv = f(*args, **kwargs)
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\views.py", line 88, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\views.py", line 158, in dispatch_request
+    return meth(*args, **kwargs)
+  File "D:\SoftEngine\classroomManager\project\project\main\views.py", line 201, in post
+    data = json.loads(request.data)
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\json\__init__.py", line 354, in loads
+    return _default_decoder.decode(s)
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\json\decoder.py", line 339, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\json\decoder.py", line 355, in raw_decode
+    obj, end = self.scan_once(s, idx)
+json.decoder.JSONDecodeError: Expecting ',' delimiter: line 2 column 14 (char 15)
+2018-12-24 22:20:33,230 ERROR:Exception on /main/tb_mechmism [POST] [in C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\app.py:1761]
+Traceback (most recent call last):
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:\SoftEngine\classroomManager\project\project\utildef.py", line 21, in decorator
+    rv = f(*args, **kwargs)
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\views.py", line 88, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\views.py", line 158, in dispatch_request
+    return meth(*args, **kwargs)
+  File "D:\SoftEngine\classroomManager\project\project\main\views.py", line 201, in post
+    data = json.loads(request.data)
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\json\__init__.py", line 354, in loads
+    return _default_decoder.decode(s)
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\json\decoder.py", line 339, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\json\decoder.py", line 355, in raw_decode
+    obj, end = self.scan_once(s, idx)
+json.decoder.JSONDecodeError: Expecting ',' delimiter: line 2 column 14 (char 15)
+2018-12-24 22:23:00,428 ERROR:Exception on /main/tb_mechmism [POST] [in C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\app.py:1761]
+Traceback (most recent call last):
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:\SoftEngine\classroomManager\project\project\utildef.py", line 21, in decorator
+    rv = f(*args, **kwargs)
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\views.py", line 88, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\site-packages\flask\views.py", line 158, in dispatch_request
+    return meth(*args, **kwargs)
+  File "D:\SoftEngine\classroomManager\project\project\main\views.py", line 201, in post
+    data = json.loads(request.data)
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\json\__init__.py", line 354, in loads
+    return _default_decoder.decode(s)
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\json\decoder.py", line 339, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Users\16zhchen\AppData\Local\Programs\Python\Python36\lib\json\decoder.py", line 355, in raw_decode
+    obj, end = self.scan_once(s, idx)
+json.decoder.JSONDecodeError: Expecting ',' delimiter: line 2 column 14 (char 15)
