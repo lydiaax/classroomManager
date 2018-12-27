@@ -14,12 +14,39 @@ var countTime = new Vue({
         {value:4,label:'较低'},
         {value:5,label:'低'}
       ],
-      classData:[
-        {classID:1,name:'计算方法'},
-        {classID:2,name:'数据挖掘'}
-      ],
+      classData:[],
       sec:[],
       secList:[1,2,3,4,5,6,7,8,0,'A','B','C'],
+    },
+    created:function() {
+      axios.get('http://127.0.0.1:5000/main/tb_course',{
+              params:{
+                  teacher:'李平'
+              }
+        })
+        .then((response)=>{
+            var data = response.data;
+            //去重
+            var r=[],n=[];
+            for(var i=0;i<data.length;i++){
+              val = data[i].course_id;
+              console.log(val)
+              console.log(r)
+              if(r.indexOf(val)==-1){
+                r.push(val);
+                n.push(data[i]);
+              }
+            }
+            this.classData = n;
+            for(var i=0;i<this.classData.length;i++){
+              this.classData[i].index = i;
+              this.classData[i].label = this.classData[i].course_id + " "+this.classData[i].course_name;
+              this.classData[i].course_id = parseInt(this.classData[i].course_id)
+            }
+            
+         }).catch((response)=>{
+            console.log(response);
+          })
     },
     methods:{
       summit:function(){
@@ -86,16 +113,17 @@ var countTime = new Vue({
             var data = response.data[0];
             console.log(data)
             var classroomID = data.id;
-            
+            var reastr = this.chooseClassID + " 考试课室申请";
             axios.put('http://127.0.0.1:5000/main/tb_reservation',{
                 class_id:classroomID,
                 user_id:5912,
                 submit_date:day1,
                 jieshu:day+' '+arr2.join(""),
-                reason:'考试课室申请',
+                reason:reastr,
                 status:0
             }).then((res)=>{
               console.log(res)
+              alert("提交成功")
             }).catch((res)=>{
               console.log(res)
             })

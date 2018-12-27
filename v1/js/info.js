@@ -1,7 +1,9 @@
 var app = new Vue({
     el:'#app',
     data:{
-        result:[]
+        result:[],
+        waitinfo:[],
+        passinfo:[]
     },
     created:function(){
         axios.get('http://127.0.0.1:5000/main/tb_reservation',{
@@ -11,13 +13,11 @@ var app = new Vue({
         })
         .then((response)=>{
             var data = response.data;
-            console.log(data)
             if(data != null && data.length != 0) {
-                console.log("in ")
                 this.result = data;
                 for(var i=0;i<this.result.length;i++){
                     this.result[i].submit_date = this.result[i].submit_date.split(" ")[0];
-                    
+                    console.log("外部:"+i)
                     //查找教室
                     axios.get('http://127.0.0.1:5000/main/tb_class',{
                         params:{
@@ -25,11 +25,12 @@ var app = new Vue({
                         }
                     })
                     .then((response)=>{
+                        console.log("res:"+i)
                         var data = response.data[0];
                         console.log(data)
                         if(data != null) {
-                            this.$set(this.result[i-1],"className",data.class_room);
-                            console.log(this.result[i-1].className)
+                            this.$set(this.result[i],"className",data.class_room);
+                            console.log(this.result[i].className)
                             
                         }
                     }).catch((response)=>{
@@ -48,20 +49,37 @@ var app = new Vue({
                         var data = response.data[0];
                         console.log(data)
                         if(data != null) {
-                            this.$set(this.result[i-1],"stuName",data.student_name);
-                            console.log(this.result[i-1].stuName)
+                            this.$set(this.result[i],"stuName",data.student_name);
+                            console.log(this.result[i].stuName)
                         }
                     }).catch((response)=>{
                         console.log(response);
                     })
                 }
             }
+            
         }).catch((response)=>{
             console.log(response);
         })
         
         
     },
+    // updated:function() {
+    //     console.log("beforeUpdate")
+    //     while(1){
+    //         if(this.result.length!=0){
+    //             for(var i=0;i<this.result.length;i++){
+    //                 if(this.result[i].status==0){
+    //                     this.waitinfo.push(result[i]);
+    //                 }else{
+    //                     this.passinfo.push(result[i]);
+    //                 }
+    //             }
+    //             this.result = this.waitinfo;
+    //             break;
+    //         }      
+    //     }
+    // },
     methods:{
         pass:function(id){
             let obj = {'id':id}
