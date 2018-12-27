@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="zh-cn">
+
+<head>
+	<title>首页</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<!-- VENDOR CSS -->
+	<link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/vendor/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="assets/vendor/linearicons/style.css">
+	<link rel="stylesheet" href="assets/vendor/chartist/css/chartist-custom.css">
+	<!-- MAIN CSS -->
+	<link rel="stylesheet" href="assets/css/main.css">
+	<!-- GOOGLE FONTS，用360代替 -->
+	<!-- <link href="https://fonts.useso.com/css?family=Source+Sans+Pro:300,400,600,700" rel="stylesheet"> -->
+	<!-- ICONS -->
+	<link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-icon.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="assets/img/favicon.png">
+	<!-- 引入样式 -->
+	<link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+	<!-- <link rel="stylesheet" href="/assets/css/el-index.css"> -->
+</head>
+
+<body>
+	<!-- WRAPPER -->
+	<div id="wrapper">
+		<!-- NAVBAR -->
+		<nav class="navbar navbar-default navbar-fixed-top">
+			<div class="brand">
+				<a href="index.html">
+					<img src="assets/img/logo-dark.png" alt="Klorofil Logo" class="img-responsive logo">
+				</a>
+			</div>
+			<div class="container-fluid">
+				<div id="navbar-menu">
+					<ul class="nav navbar-nav navbar-right">
+						<!-- 消息提示 -->
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle icon-menu" data-toggle="dropdown">
+								<i class="lnr lnr-alarm"></i>
+								<span class="badge bg-danger">5</span>
+							</a>
+							<!-- 消息简要，下拉菜单 -->
+							<ul class="dropdown-menu notifications">
+								<li><a href="#" class="notification-item"><span class="dot bg-warning"></span>System space is almost full</a></li>
+								<li><a href="#" class="notification-item"><span class="dot bg-danger"></span>You have 9 unfinished tasks</a></li>
+								<li><a href="#" class="notification-item"><span class="dot bg-success"></span>Monthly report is available</a></li>
+								<li><a href="#" class="notification-item"><span class="dot bg-warning"></span>Weekly meeting in 1 hour</a></li>
+								<li><a href="#" class="notification-item"><span class="dot bg-success"></span>Your request has been approved</a></li>
+								<li><a href="#" class="more">See all notifications</a></li>
+							</ul>
+						</li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+								<!-- <img src="assets/img/user.png" class="img-circle" alt="Avatar">  -->
+								<span>测试用户</span> 
+								<i class="icon-submenu lnr lnr-chevron-down"></i>
+							</a>
+							<ul class="dropdown-menu">
+								<li><a href="#"><i class="lnr lnr-user"></i> <span>My Profile</span></a></li>
+								<li><a href="#"><i class="lnr lnr-envelope"></i> <span>Message</span></a></li>
+								<li><a href="#"><i class="lnr lnr-cog"></i> <span>Settings</span></a></li>
+								<li><a href="#"><i class="lnr lnr-exit"></i> <span>Logout</span></a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<!-- END NAVBAR -->
+		<!-- LEFT SIDEBAR -->
+		<div id="sidebar-nav" class="sidebar">
+			<div class="sidebar-scroll">
+				<nav>
+					<ul class="nav">
+						<!-- 侧边栏，需要修改地址和类名 -->
+						<li><a href="index.html"><i class="lnr lnr-home"></i> <span>首页</span></a></li>
+						<li><a href="#" class=""><i class="lnr lnr-code"></i> <span>预约空闲教室</span></a></li>
+                        <li><a href="#" class="active"><i class="lnr lnr-cog"></i> <span>考试课室申请</span></a></li>
+						<li><a href="#" class=""><i class="lnr lnr-alarm"></i> <span>补课课室申请</span></a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+		<!-- END LEFT SIDEBAR -->
+		<!-- MAIN -->
+		<div class="main">
+			<!-- MAIN CONTENT -->
+			<div class="main-content">
+				<div  id="timePicker" class="container-fluid">
+					<!-- 条件选择开始 -->
+					<div  class="panel panel-headline">
+						<div  class="panel-heading clearfix">
+					
+							
+                            <h3 class="panel-title">选择条件</h3>
+                            <!-- <div class="panel-timeDiv pull-left">
+								<p class="panel-text">课程</p>
+								<el-select v-model="chooseClassID" placeholder="请选择">
+									<el-option
+									  v-for="item in classData"
+									  :key="item.classID"
+									  :label="item.name"
+									  :value="item.classID">
+									</el-option>
+								  </el-select>
+							</div> -->
+                            <div class="panel-timeDiv">
+                                <p class="panel-text">考试人数</p>
+                            
+                                <el-input-number v-model="num" :min="1" :max="200" label="描述文字"></el-input-number>
+                            </div>
+							<div class="panel-timeDiv pull-left">
+								<p class="panel-text">考试时间</p>
+							
+								<el-date-picker  v-model="examTime" type="date"
+									placeholder="选择日期" value-format="yyyy-MM-dd"></el-date-picker>
+                            </div>
+                            <div class="panel-timeDiv" >
+                                <p class="panel-text">节数</p>
+                                <el-checkbox-group v-model="sec" >
+                                    <el-checkbox class="setCenter" align="center" v-for="item in secList"
+                                        :label="item" :key="item">{{item}}</el-checkbox>
+								</el-checkbox-group>
+								
+                            </div>
+						</div>
+						<div id="result">
+							<el-button type="primary" @click="summit()">查询</el-button>
+							<div v-if="result" class="exam-result">
+								<el-table :data="result" scripe >
+										<el-table-column align="center" prop="course_name" label="教室名"></el-table-column>
+										<el-table-column align="center" prop="number" label="容纳人数"></el-table-column>
+										<el-table-column align="center" label="提交申请">
+											<template slot-scope="scope">
+												<el-button type="primary" plain size="mini" @click="apply(result[scope.$index].course_name)">提交</el-button>
+											</template>
+											<!-- <button type="button" class="btn btn-primary center-block" @click="apply()"  >申请</button> -->
+										</el-table-column>
+								</el-table>
+							</div>
+
+						</div>
+					</div>
+					<!-- END 条件选择-->
+
+				</div>
+	<!-- END WRAPPER -->
+	<!-- Javascript -->
+	<script src="assets/vendor/jquery/jquery.min.js"></script>
+	<script src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+	<script src="assets/vendor/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+	<script src="assets/vendor/jquery.easy-pie-chart/jquery.easypiechart.min.js"></script>
+	<script src="assets/vendor/chartist/js/chartist.min.js"></script>
+	<script src="assets/scripts/klorofil-common.js"></script>
+	<!-- <script src="assets/lib/vue.js"></script> -->
+	
+	<!-- import Vue before Element -->
+	<script src="assets/lib/vue.js"></script>
+	<script src="https://cdn.bootcss.com/axios/0.18.0/axios.js"></script>
+	<!-- 引入组件库 -->
+	<script src="assets/lib/index.js"></script>
+	<script src="./js/examth.js"></script>
+</body>
+
+</html>

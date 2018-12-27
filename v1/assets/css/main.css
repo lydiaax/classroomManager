@@ -633,16 +633,18 @@ fieldset[disabled] .btn {
     padding-bottom: 20px;
     position: relative; }
     .panel .panel-heading .panel-title {
+      padding-top:20px;
+      padding-left: 10px;
       margin: 0;
       font-size: 18px;
       font-weight: 300; }
-    .panel .panel-heading button {
+    .panel .panel-heading {
       padding: 0;
       margin-left: 5px;
       background-color: transparent;
       border: none;
       outline: none; }
-      .panel .panel-heading button i {
+      .panel .panel-heading  i {
         font-size: 14px; }
   .panel .panel-body {
     padding-top: 10px;
